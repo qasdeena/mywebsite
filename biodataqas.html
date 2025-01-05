@@ -1,0 +1,248 @@
+<html>
+<head>
+    <title>Biodata</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/026/421/357/original/cartoon-animated-blue-sky-moving-background-with-clouds-seamless-loop-video.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .biodata-container {
+            width: 90%;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .biodata-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #555;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 3px 3px #d0d0d0;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info b {
+            color: #4a90e2;
+            font-weight: 600;
+        }
+
+        .bio-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .bio-header p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #9b9b9b;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        .bio-header img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 6px solid #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .info p {
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 30px auto;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .btn:hover {
+            background-color: #3e7bbf;
+            transform: translateY(-3px);
+        }
+
+        .info {
+            background-color: #f3f3f3;
+            border-left: 5px solid #4a90e2;
+            padding-left: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info .icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+            color: #4a90e2;
+        }
+
+        /* Modal for Video or Image Popups */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+        }
+
+        .modal video {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .biodata-container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="biodata-container">
+        <div class="bio-header">
+            <img src="images/photo_2024-04-20_00-28-16.jpg" alt="Profile Picture">
+            <h1>Biodata of Nurqasdeena</h1>
+            <big><p><font color="#4b3f44">Welcome to my biodata!</font></p></big>
+        </div>
+
+        <div class="info">
+            <h2>🐻‍❄️ྀིྀི Personal Information 🐻‍❄️ྀིྀི</h2>
+            <p><b>Name:</b> Nurqasdeena Binti Sharal Izam</p>
+            <p><b>Date of Birth:</b> 15<sup>th</sup> August 2004</p>
+            <p><b>Email:</b> qasdeena00@gmail.com 📧</p>
+            <p><b>Phone Number:</b> +60 11 2887 4256 📱</p>
+        </div>
+
+        <div class="info">
+            <h2>🐻☕🧸 Personal Interests 📋🧋🍪</h2>
+            <p><b>Favorite Books:</b> Harry Potter by J.K Rowling 🐦‍🔥🪄⚯ ͛</p>
+            <p><b>Favorite Genre of Movie(s):</b> Romance 𓆩♡𓆪</p>
+            <p><b>Favorite Artist:</b> Madison Beer 🎤🫧</p>
+            <p><b>Favorite Genre of Colour:</b> <font color="#ff6ec7">Pink 💗</font></p>
+
+        </div>
+
+        <div class="info">
+            <h2>𐙚⋆°.⋆♡ Goals 🎯</h2>
+            <p><b>Short-Term Goals:</b> Get my own first car 🚗</p>
+            <p><b>Long-Term Goals:</b> Become successful and make my family proud જ⁀➴ 🩷</p>
+        </div>
+
+        <button class="btn">
+            <a href="mailto:qasdeena00@gmail.com" style="color: white; text-decoration: none;">
+                💌 Contact Me 💌
+            </a>
+        </button>
+
+    </div>
+
+    <br>
+
+<div align="center">
+    <div class="info">
+<h2><font color="#555">My Born Place (Hospital Selayang)</font></h2>
+<img src="images/malaysia-map.jpg" usemap="#image-map">
+<map name="image-map">
+    <area target="_blank" alt="Hospital Selayang" title="Hospital Selayang" href="https://jknselangor.moh.gov.my/hselayang/" coords="337,547,318,531,332,526,342,537,354,541,362,542,372,547,380,552,388,541,396,536,399,547,405,552,411,556,421,542,431,548,442,552,446,560,448,571,442,590,446,599,453,603,462,606,472,612,470,625,464,633,459,641,453,652,440,649,431,644,421,650,410,652,411,665,404,676,396,666,392,655,394,641,386,626,378,609,364,585,350,564,335,545,323,537,337,547" shape="poly">
+</map>
+</div>
+
+<!-- Navigation Bar -->
+<nav>
+    <div align="center">
+    <b><font color="#333" face="cursive">
+    <a href="biodataqas.html" target="_blank">Biodata</a>
+    <a href="galleryqasdeena.html" target="_blank">Gallery</a>
+    <a href="family.html" target="_blank">Family</a>
+    <a href="education.html" target="_blank">Education</a>
+    <a href="experience.html" target="_blank">Experience</a>
+</font></div>
+</b>
+</nav>
+
+<br>
+<div align="center">
+    <a href="#top"> Back to Top</a>
+</div>
+
+    <!-- Footer Section -->
+     <div align="center">
+    <footer>
+        <small><b><p>&copy;2024 Qasdeena. All Rights Reserved</p></b></small>
+        </footer>
+    </div>
+</body>
+</html>
+
+

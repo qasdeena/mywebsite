@@ -1,0 +1,255 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet My Family</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('https://rare-gallery.com/uploads/posts/956821-waves-water-purple-sky.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Bio Container */
+        .bio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .bio-box {
+            width: 300px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bio-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .bio-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .bio-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .bio-box h3 {
+            color: #333;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .bio-box p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            animation: modalContent 0.3s ease-in-out;
+        }
+
+        .modal-content h3 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .modal-content p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6347;
+            cursor: pointer;
+        }
+
+        /* Animation for Modal */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes modalContent {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .bio-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Meet My Family</h1>
+    <div class="bio-container">
+        <!-- Family Member Cards -->
+        <div class="bio-box" onclick="showModal('mom')">
+            <img src="images//ibu.jpg" alt="Mom">
+            <h3>Dayang Sofeena 🍓 </h3>
+            <p>Housewife</p>
+        </div>
+        <div class="bio-box" onclick="showModal('sister')">
+            <img src="images/adik.jpg" alt="Sister">
+            <h3>Syufeera 🍓</h3>
+            <p>Student</p>
+        </div>
+        <div class="bio-box" onclick="showModal('brother')">
+            <img src="images/abang2.jpg" alt="Brother">
+            <h3>Yusuf Mushriff 🍓 </h3>
+            <p>Engineer</p>
+        </div>
+        <div class="bio-box" onclick="showModal('dad')">
+            <img src="images/photo_2abah_17-20-42.jpg" alt="Dad">
+            <h3>Sharal Izam 🍓</h3>
+            <p>Architect</p>
+        </div>
+    </div>
+
+    <!-- Modals for each family member -->
+    <div id="momModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('mom')">&times;</span>
+            <h3>My Mom</h3>
+            <p><b>Name:</b> Dayang Sofeena</p>
+            <p><b>Occupation:</b> Housewife</p>
+            <p><b>Hobbies:</b> Singing & Reading</p>
+            <p>I address my mother as "Ibu" and she is amazing. She can cook any food that tastes super delicious, she knows how to sew, and she plays the piano. She is my idol 🫧💗✨</p>
+        </div>
+    </div>
+
+    <div id="sisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('sister')">&times;</span>
+            <h3>My Sister</h3>
+            <p><b>Name:</b> Syufeera</p>
+            <p><b>Occupation:</b> Student</p>
+            <p><b>Hobbies:</b> Dancing & Music</p>
+            <p>She is 15 years old this year. She loves Pilates and often asks me to play Roblox and Minecraft with her. She also says I am a great cook, learning it from my mom and grandmother 🎀🫶🏻💌💓</p>
+        </div>
+    </div>
+
+    <div id="brotherModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('brother')">&times;</span>
+            <h3>My Brother</h3>
+            <p><b>Name:</b> Yusuf Mushriff</p>
+            <p><b>Occupation:</b> Engineer</p>
+            <p><b>Hobbies:</b> Sports & Technology</p>
+            <p>My brother and I used to fight as kids, but we love each other deeply. Now, we help each other a lot. He sends me money, and I cook for him. Our bond has only grown stronger over time!</p>
+        </div>
+    </div>
+
+    <div id="dadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('dad')">&times;</span>
+            <h3>My Dad</h3>
+            <p><b>Name:</b> Sharal Izam</p>
+            <p><b>Occupation:</b> Architect</p>
+            <p><b>Hobbies:</b> Cooking & Painting</p>
+            <p>My dad is hardworking and always encourages us to chase our dreams. He also loves cooking and is always ensuring that we are healthy and well-fed. He is truly an amazing father!</p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(familyMember) {
+            document.getElementById(familyMember + 'Modal').style.display = "flex";
+        }
+
+        function closeModal(familyMember) {
+            document.getElementById(familyMember + 'Modal').style.display = "none";
+        }
+    </script>
+
+<h1><p>𖹭 ࣪ ﹏𓊝﹏𓂁﹏𖹭 ࣪ ˖</p></h1>
+
+
+<!-- Navigation Bar -->
+<nav>
+    <div align="center">
+    <b><font color="#333" face="cursive">
+    <a href="biodataqas.html" target="_blank">Biodata</a>
+    <a href="galleryqasdeena.html" target="_blank">Gallery</a>
+    <a href="family.html" target="_blank">Family</a>
+    <a href="education.html" target="_blank">Education</a>
+    <a href="experience.html" target="_blank">Experience</a>
+</font></div>
+</b>
+</nav>
+
+ <!-- Footer Section -->
+ <footer>
+    <small><b><p>&copy;2024 Qasdeena. All Rights Reserved</p></b></small>
+    </footer>
+
+</body>
+</html>
